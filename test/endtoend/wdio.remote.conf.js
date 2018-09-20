@@ -13,8 +13,11 @@ function createCapability (capability) {
 exports.config = Object.assign(base.config, {
   capabilities: [
     { browserName: 'firefox', version: '38.0', platform: 'Linux' },
+    { browserName: 'firefox', version: '62.0', platform: 'Linux' },
     { browserName: 'internet explorer', version: '10.0', platform: 'Windows 7' },
+    { browserName: 'internet explorer', version: '11.0', platform: 'Windows 7' },
     { browserName: 'chrome', version: '50.0', platform: 'Windows 7' },
+    { browserName: 'chrome', version: '69.0', platform: 'Windows 10' },
     { browserName: 'MicrosoftEdge', version: '14.14393', platform: 'Windows 10' },
     // { browserName: 'safari', version: '11.0', platform: 'macOS 10.12' },
     { browserName: 'safari', version: '10.0', platformName: 'iOS', platformVersion: '10.0', deviceOrientation: 'portrait', deviceName: 'iPhone 6 Simulator', appiumVersion: '1.7.1' },
