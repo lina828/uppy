@@ -45,7 +45,7 @@ lerna version prerelease --yes \
   --exact \
   --force-publish \
   --npm-client=npm \
-  --no-git-tag-version --no-push
+  --no-push
 lerna publish from-git --yes \
   --registry="$VERDACCIO_REGISTRY" \
   --no-verify-access \
