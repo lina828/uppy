@@ -57,9 +57,11 @@ describe.only('ThumbnailGenerator', () => {
       }
     }
 
-    browser.executeAsync((cb) => {
-      window.thumbnailsReady.then(cb)
+    const { value } = browser.executeAsync((done) => {
+      window.thumbnailsReady.then(done)
+      window.onerror = (err) => done({ stack: err.stack })
     })
+    if (value && value.stack) console.error(value.stack)
 
     // const names = $$('p.file-name')
     const previews = $$('img.file-preview')
